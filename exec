@@ -4,6 +4,7 @@
 echo "Hello this is just for testing the pipelines"
 
 echo "Guest name is $GUEST_NAME"
+echo "password we are using is $password and username for same is $username"
 
 echo "wait below for 5 sec"
 
