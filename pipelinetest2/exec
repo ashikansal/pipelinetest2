@@ -1,0 +1,25 @@
+#!/bin/sh
+
+
+echo "Hello this is just for testing the pipelines"
+
+echo "wait below for 5 sec"
+
+count=0
+while [ "$count" -lt 5 ]; do
+  ((count++))
+  sleep 1
+  echo "waiting since $count second"
+done
+
+echo "creating new file with name sample"
+
+cat >sample.txt <<EOF
+Hi me created for testing build pipelines
+Welcome to GoCD
+EOF
+
+echo "copying file to agent host"
+cp test.txt agenthost.txt
+
+echo "me finished doing all tasks"
